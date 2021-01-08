@@ -88,3 +88,7 @@ $ npm install weex-unisoft
   }
 </script>
 ```
+
+## Demo
+请用WeexPlayground扫描二维码
+![Image text](https://raw.githubusercontent.com/zgoin/weex-unisoft-demo/main/src/assets/img/qrcode.png)
