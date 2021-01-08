@@ -1,0 +1,134 @@
+/**********字体颜色**************/
+.color-fff{color: #fff}
+.color-000{color: #000}
+.color-333{color: #333}/*标题*/
+.color-666{color: #666}/*内容*/
+.color-999{color: #999}/*说明*/
+.color-theme{color: #e16b23}/*主色*/
+.color-blue{color:#589acb}
+.color-orange{color: #f39c1f}
+.color-green{color: #7aac52}
+.color-purple{color:#838DEC;}
+.color-red{color: #D5340B;}
+.color-44120E{color: #44120E;}
+.color-82CE45{color: #82CE45;}
+.color-CE4545{color: #CE4545;}
+.color-20B759{color: #20B759;}
+/**********背景颜色**************/
+.bg-container{background-color: #f2f2f2;}/*容器背景*/
+.bg-fff{background-color: #ffffff;}
+.bg-f3{background-color: #f3f3f3;}
+.bg-82CE45{background-color: #82CE45;}
+.bg-CE4545{background-color: #CE4545;}
+.bg-theme{background-color: #e16b23;}
+.bg-grey{background-color: #797979;}
+.bg-orange{background-color: #f39c1f;}
+.bg-yellow{background-color: #FFFBE6;}
+.bg-unset{background-color: rgba(255, 255, 255, 0)}
+/**********字体大小**************/
+.font18{font-size:18px;}
+.font20{font-size:20px;}
+.font22{font-size:22px;}
+.font24{font-size:24px;}
+.font26{font-size:26px;}
+.font28{font-size:28px;}
+.font30{font-size:30px;}
+.font32{font-size:32px;}
+.font34{font-size:34px;}
+.font36{font-size:36px;}
+.font38{font-size:38px;}
+.font40{font-size:40px;}
+/**********加粗*******************/
+.font-bold{font-weight: bold}
+/**********iconFont**************/
+.iconfont{font-family:iconfont;font-size:40px;}
+/**********文字对齐方式*******************/
+.text-left{text-align: left}
+.text-center{text-align: center}
+.text-right{text-align: right}
+
+/* flex样式 */
+/*https://weex.apache.org/zh/docs/styles/common-styles.html#flexbox*/
+.flex-row{flex-direction: row;} /*水平布局（默认垂直布局）*/
+.flex-wrap{flex-wrap: wrap;} /*多行排布（默认单行排布）*/
+.flex-space-end{justify-content: flex-end;} /*成员项排列在容器的后部（默认排列在前部）*/
+.flex-space-center{justify-content: center;} /*中间对齐，成员项排列在容器中间、两边留白（默认排列在前部）*/
+.flex-space-between{justify-content: space-between;} /*两端对齐，空白均匀地填充到flex成员项之间（默认排列在前部）*/
+.flex-space-around{justify-content: space-around;} /*两端对齐，空白均匀地填充到flex成员项之间（默认排列在前部）*/
+.flex-items-start{align-items: flex-start;} /*上对齐（默认拉伸高度至 flex 容器的大小）*/
+.flex-items-end{align-items: flex-end;} /*下对齐（默认拉伸高度至 flex 容器的大小）*/
+.flex-items-center{align-items: center;} /*中间对齐（默认拉伸高度至 flex 容器的大小）*/
+.flex1{flex: 1}
+.flex2{flex: 2}
+.flex3{flex: 3}
+.flex4{flex: 4}
+.flex5{flex: 5}
+.flex6{flex: 6}
+
+/* 边框 */
+.border-dashed{border-style:dashed}/*虚线（默认实线）*/
+.border-dotted{border-style:dotted}/*圆点（默认实线）*/
+.border-bottom-tab{border-bottom-width: 4px;border-bottom-color: #e16b23;}
+.border-top{border-top-width: 1px;border-top-color: #E6E6E6;}
+.border-bottom{border-bottom-width: 1px;border-bottom-color: #E6E6E6;}
+.border-left{border-left-width: 1px;border-left-color: #E6E6E6;}
+.border-right{border-right-width: 1px;border-right-color: #E6E6E6;}
+.border-1{border-width: 1px;border-color: #E6E6E6;}
+.border-radius-20{border-radius: 20px;}
+.border-radius-8{border-radius: 8px;}
+.border-FFE58F{border-width: 1px;border-color: #FFE58F;}
+.border-themeColor{border-width: 1px;border-color: #e16b23;}
+
+/* 外边距 */
+.m-10{margin: 10px;}
+.mt-10{margin-top: 10px}
+.mb-10{margin-bottom: 10px}
+.ml-10{margin-left: 10px}
+.mr-10{margin-right: 10px}
+.m-20{margin: 20px;}
+.mt-20{margin-top: 20px}
+.mb-20{margin-bottom: 20px}
+.ml-20{margin-left: 20px}
+.mr-20{margin-right: 20px}
+.m-30{margin: 30px;}
+.mt-30{margin-top: 30px}
+.mb-30{margin-bottom: 30px}
+.ml-30{margin-left: 30px}
+.mr-30{margin-right: 30px}
+.m-40{margin: 40px;}
+.mt-40{margin-top: 40px}
+.mb-40{margin-bottom: 40px}
+.ml-40{margin-left: 40px}
+.mr-40{margin-right: 40px}
+
+/* 内边距 */
+.p-10{padding: 10px;}
+.pt-10{padding-top: 10px}
+.pb-10{padding-bottom: 10px}
+.pl-10{padding-left: 10px}
+.pr-10{padding-right: 10px}
+.p-20{padding: 20px;}
+.pt-20{padding-top: 20px}
+.pb-20{padding-bottom: 20px}
+.pl-20{padding-left: 20px}
+.pr-20{padding-right: 20px}
+.p-30{padding: 30px;}
+.pt-30{padding-top: 30px}
+.pb-30{padding-bottom: 30px}
+.pl-30{padding-left: 30px}
+.pr-30{padding-right: 30px}
+.p-40{padding: 40px;}
+.pt-40{padding-top: 40px}
+.pb-40{padding-bottom: 40px}
+.pl-40{padding-left: 40px}
+.pr-40{padding-right: 40px}
+
+/* 宽高 */
+.screen-width{width: 750px;}
+.width120{width: 120px;}
+.width320{width: 320px;}
+.height-100{height: 100px;}
+.height-250{height: 250px;}
+.height-60{height: 60px;}
+.height-66{height: 66px;}
+.height-40{height: 40px;}
