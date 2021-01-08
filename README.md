@@ -1,27 +1,90 @@
-# Introduction
+# 介绍
 
-This boilerplate is targeted towards large, serious projects and assumes you are somewhat familiar with Webpack and `weex-loader`. 
+为了方便开发与简化代码，基于weex项目基础架构weex-unisoft. 
 
-## Quickstart
-
-To use this template, scaffold a project with [weexpack v1.1.1+](https://github.com/weexteam/weex-pack).
+## 快速开始
 
 ``` bash
-$ npm install -g weex-toolkit
-$ weex create my-project # default will create the webpack template
-$ cd my-project && npm start
+$ npm install weex-unisoft
 ```
 
-## How to use less/sass/pug
+## 使用
 
-Take `sass` for example:
+以UtTabBar为例：
 
 ```
-$ npm i node-sass sass-loader --save
+<template>
+    <ut-tab-bar titleType="iconFont" 
+                :tab-titles="tabTitles" 
+                :tab-styles="tabStyles" 
+                ref="tabbar" 
+                @tabSelected="tabSelected">
+        <div></div> 
+        <div></div> 
+        <div></div> 
+    </ut-tab-bar>
+</template>
+
+<script>
+  import {UtTabBar} from 'weex-unisoft';
+  const dom = weex.requireModule('dom');
+  
+  export default {
+    components: {UtTabBar},
+    data: () => ({
+      tabTitles: [
+        {
+          title: '消息',
+          codePoint: '\ue763',
+          activeCodePoint: '\ue762'
+        },
+        {
+          title: '主页',
+          codePoint: '\ue729',
+          activeCodePoint: '\ue60a'
+        },
+        {
+          title: '我的',
+          codePoint: '\ue75e',
+          activeCodePoint: '\ue75d'
+        }
+      ],
+      tabStyles: {
+        bgColor: '#FFFFFF',
+        titleColor: '#333333',
+        activeTitleColor: '#40a704',
+        activeBgColor: '#FFFFFF',
+        activeIconFontColor: '#40a704',
+        iconFontColor: '#666666',
+        isActiveTitleBold: true,
+        iconWidth: 70,
+        iconHeight: 70,
+        width: 150,
+        height: 120,
+        fontSize: 24,
+        textPaddingLeft: 10,
+        textPaddingRight: 10,
+        fontFamily: 'unisoft-iconfont',
+        iconFontSize: 42,
+      }
+    }),
+    beforeCreate () {
+      dom.addRule('fontFace', {
+        'fontFamily': "unisoft-iconfont",
+        'src': "url('https://at.alicdn.com/t/font_2282197_n2dl1zgbw7e.ttf')"
+      });
+    }
+  };
+</script>
 ```
 
-Then, you just need to change the `style` tag as: `<style lang="sass"><style>`.
+如果要全部引入：
 
-## How to create your own template
-
-See [How-to-create-your-own-template](https://github.com/weex-templates/How-to-create-your-own-template).
+```
+<script>
+  import {UtCommonMixin} from 'weex-unisoft';
+  export default {
+    mixins: [UtCommonMixin],
+  }
+</script>
+```
