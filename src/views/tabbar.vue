@@ -4,21 +4,18 @@
                 :tab-styles="tabStyles" 
                 ref="tabbar" 
                 @tabSelected="tabSelected">
-        <message></message> 
-        <home></home>
-        <my></my>
+        <ut-nav-bar title="第一个页面"/>
+        <ut-nav-bar title="第二个页面"/>
+        <ut-nav-bar title="第三个页面"/>
     </ut-tab-bar>
 </template>
 
 <script>
-  import {UtTabBar} from 'weex-unisoft';
-  import message from './views/message.vue';
-  import my from './views/my.vue';
-  import home from './views/home.vue';
+  import {UtTabBar,UtNavBar} from 'weex-unisoft';
   const dom = weex.requireModule('dom');
   
   export default {
-    components: {UtTabBar, message, my, home},
+    components: {UtTabBar,UtNavBar},
     data: () => ({
       tabTitles: [
         {

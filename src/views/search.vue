@@ -1,13 +1,14 @@
 <template>
-    <ut-nav-bar :title="title">
+    <ut-nav-bar title="Search">
       <ut-search placeholder="搜索" backgroundColor="#ffffff" @focus="isSearch=true"/>
-      <ut-list v-if="list.length" 
-                @refresh="refresh" 
-                @loadmore="loadmore" 
-                :refreshing="refreshing" 
-                :loading="loading" 
-                :noMore="noMore"
-                :noNextLabel="list.length > 15?'没有下一页了':''">
+      <ut-list 
+        v-if="list.length" 
+        @refresh="refresh"
+        @loadmore="loadmore"
+        :refreshing="refreshing"
+        :loading="loading"
+        :noMore="noMore"
+        :noNextLabel="list.length > 15?'没有下一页了':''">
         <cell v-for="(item, index) in list" :key="index">
           <ut-cell 
                 border-bottom
@@ -16,18 +17,11 @@
                 :title="`${item}、标题标题标题标题标题标题标题标题标题标题标题`"
                 :icon-style="{color:'#589acb'}"
                 :value-style="{fontSize:26}"
-                :title-style="{flex:5}"
-                @click="push('messageList.js', `${item}、测试`)">
+                :title-style="{flex:5}">
           </ut-cell>
         </cell>
       </ut-list>
       <ut-empty v-else class="border-top border-bottom"></ut-empty>
-      
-      <div class="flex-row bg-fff">
-        <text class="bg-theme color-fff pt-20 pb-20 m-30 text-center border-radius-20 flex1" @click="add">添加</text>
-        <text class="bg-82CE45 color-fff pt-20 pb-20 m-30 text-center border-radius-20 flex1" @click="del">删除</text>
-      </div>
-      <ut-loading :show="loading" :needMask="true"></ut-loading>
 
       <ut-search v-if="isSearch" placeholder="搜索" :fullscreen="true" v-model="inputdata" @change="search" @cancel="cancel">
         <ut-list v-if="searchlist.length">
@@ -92,15 +86,6 @@
       cancel() {
         this.isSearch = false;
         this.searchlist = [];
-      },
-      rightClick() {
-        this.toast('刷新~');
-      },
-      add() {
-        this.list.push(this.list.length+1);
-      },
-      del() {
-        this.list.splice(this.list.length - 1, 1);
       }
     }
   };

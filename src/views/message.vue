@@ -20,13 +20,14 @@
         {title: 'cell', icon:'cell', iconStyle: {color:'#029e43'}, url: 'views/cell.js'},
         {title: 'empty', icon:'empty', iconStyle: {color:'#f37a2a'}, url: 'views/empty.js'},
         {title: 'icon', icon:'single', iconStyle: {color:'#1088f8'}, url: 'views/icon.js'},
-        {title: 'input', icon:'input', iconStyle: {color:'#1088f8'}},
-        {title: 'list', icon:'list', iconStyle: {color:'#029e43'}},
-        {title: 'loading', icon:'loading', iconStyle: {color:'#029e43'}},
-        {title: 'navBar', icon:'navbar', iconStyle: {color:'#1088f8'}},
-        {title: 'scroller', icon:'scroller', iconStyle: {color:'#029e43'}},
-        {title: 'search', icon:'search', iconStyle: {color:'#1088f8'}},
-        {title: 'tabBar', icon:'tabbar', iconStyle: {color:'#029e43'}}
+        {title: 'input', icon:'input', iconStyle: {color:'#1088f8'}, url: 'views/input.js'},
+        {title: 'list', icon:'list', iconStyle: {color:'#029e43'}, url: 'views/list.js'},
+        {title: 'loading', icon:'loading', iconStyle: {color:'#029e43'}, url: 'views/loading.js'},
+        {title: 'navBar', icon:'navbar', iconStyle: {color:'#1088f8'}, url: 'views/navbar.js'},
+        {title: 'scroller', icon:'scroller', iconStyle: {color:'#029e43'}, url: 'views/scroller.js'},
+        {title: 'search', icon:'search', iconStyle: {color:'#1088f8'}, url: 'views/search.js'},
+        {title: 'tabBar', icon:'tabbar', iconStyle: {color:'#029e43'}, url: 'views/tabbar.js'},
+        {title: '页面跳转及传值', icon:'share', iconStyle: {color:'#1088f8'}, url: 'views/page.js'}
       ],
     }),
     methods: {
