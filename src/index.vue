@@ -3,10 +3,11 @@
                 :tab-titles="tabTitles" 
                 :tab-styles="tabStyles" 
                 ref="tabbar" 
+                fullScreen
                 @tabSelected="tabSelected">
-        <message></message> 
-        <home></home>
-        <my></my>
+        <message ref="message"></message> 
+        <home ref="home"></home>
+        <my ref="my"></my>
     </ut-tab-bar>
 </template>
 
@@ -38,22 +39,7 @@
         }
       ],
       tabStyles: {
-        bgColor: '#FFFFFF',
-        titleColor: '#333333',
-        activeTitleColor: '#40a704',
-        activeBgColor: '#FFFFFF',
-        activeIconFontColor: '#40a704',
-        iconFontColor: '#666666',
-        isActiveTitleBold: true,
-        iconWidth: 70,
-        iconHeight: 70,
-        width: 150,
-        height: 120,
-        fontSize: 24,
-        textPaddingLeft: 10,
-        textPaddingRight: 10,
-        fontFamily: 'unisoft-iconfont',
-        iconFontSize: 42,
+        fontFamily: 'unisoft-iconfont'
       }
     }),
     beforeCreate () {
@@ -64,7 +50,13 @@
     },
     methods: {
       tabSelected(e) {
-        console.log('点击page'+e.page);
+        if (e.page == 0) {
+          this.$refs.message.init();
+        } else if (e.page == 1) {
+          this.$refs.home.init();
+        } else if (e.page == 2) {
+          this.$refs.my.init();
+        }
       }
     },
     mounted() {

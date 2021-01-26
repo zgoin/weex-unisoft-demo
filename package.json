@@ -29,7 +29,7 @@
   "dependencies": {
     "phantom-limb": "0.0.1",
     "vue": "^2.5.11",
-    "weex-unisoft": "^1.1.1",
+    "weex-unisoft": "^1.1.4",
     "weex-vue-render": "^0.12.26"
   },
   "devDependencies": {
